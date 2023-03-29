@@ -4,6 +4,11 @@
         <title>Lucas Pages - Web Dev</title>
 
         <link href="resources/style.css" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;700&display=swap" rel="stylesheet">
+
         <script src="script.js"></script>
         <script src="https://kit.fontawesome.com/2a117bd933.js" crossorigin="anonymous"></script>
     </head>
@@ -22,20 +27,25 @@
         </header>
         <main>
             <section id="about">
-                <div class="text-container">
-                    <h2>About Me</h2>
-                    <p>Junior Software Engineer specialized in data management and web dev skills.</p>
-                    <p>I graduated in 2022 from a Masters' degree in Computer Science with a specialization in AI at Université de Montréal.</p>
-                    <p>I'm now looking for work in the field of Data Science and Software and Data Engineering.</p>
-                </div>
-                <div class="img-container">
-                    <img src="resources/media/profile.jpg" alt="Profile picture">
-                </div>
+                <h2>About Me</h2>
+                <div class="about-container">
+                    <div class="text-container">
+                        <p>Junior Software Engineer specialized in data management and web dev skills.</p>
+                        <br>
+                        <p>I graduated in 2022 from a Masters' degree in Computer Science with a specialization in AI at Université de Montréal.</p>
+                        <br>
+                        <p>I'm now looking for work in the field of Data Science and Software and Data Engineering.</p>
+                    </div>
+                    <div class="img-container">
+                        <img src="resources/media/profile.jpg" alt="Profile picture">
+                    </div>
+                    </div>
             </section>
             <section id="projects">
-                <article id="dataner">
+                <h2>Projects</h2>
+                <article id="dataner" class="project-container">
                     <div class="text-container">
-                        <h2>DataNER</h2>
+                        <h3>DataNER</h3>
                         <p>DataNER is my masters' thesis project. It is a framework for automated dataset building for NER using Wikipedia and WikiData.</p>
                         <p>The code for the famework is available on <a href="https://github.com/LucasPages/dataner_creation">Github</a>.</p>
                         <p>Built in Python and bash shell code.</p>
@@ -44,15 +54,15 @@
                         <img src="resources/media/dataner.png" alt="wikimedia logos">
                     </div>
                 </article>
-                <article id="shifttracker">
+                <article id="shifttracker" class="project-container">
+                    <div class="img-container">
+                        <img src="resources/media/clock.jpg" alt="minimalist clock">
+                    </div>
                     <div class="text-container">
-                        <h2>Shift Tracker</h2>
+                        <h3>Shift Tracker</h3>
                         <p>Shift Tracker is an ongoing web and mobile app project to keep track of worked shifts in any relevant work environments, such as restaurants, nursing or the service industry.</p>
                         <p>The idea for this app came from my own experience working in restaurants and wanting to log my shifts.</p>
                         <p>Built in JavaScript using React Native.</p>
-                    </div>
-                    <div class="img-container">
-                        <img src="resources/media/clock.jpg" alt="minimalist clock">
                     </div>
                 </article>
             </section>
