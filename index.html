@@ -1,12 +1,74 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Lucas Pagès - Web Dev</title>
+        <title>Lucas Pages - Web Dev</title>
 
         <link href="resources/style.css" rel="stylesheet">
         <script src="script.js"></script>
+        <script src="https://kit.fontawesome.com/2a117bd933.js" crossorigin="anonymous"></script>
     </head>
     <body>
+        <header>
+            <h1 id="logo">PORTFOLIO</h1>
 
+            <nav>
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="about">
+                <div class="text-container">
+                    <h2>About Me</h2>
+                    <p>Junior Software Engineer specialized in data management and web dev skills.</p>
+                    <p>I graduated in 2022 from a Masters' degree in Computer Science with a specialization in AI at Université de Montréal.</p>
+                    <p>I'm now looking for work in the field of Data Science and Software and Data Engineering.</p>
+                </div>
+                <div class="img-container">
+                    <img src="resources/media/profile.jpg" alt="Profile picture">
+                </div>
+            </section>
+            <section id="projects">
+                <article id="dataner">
+                    <div class="text-container">
+                        <h2>DataNER</h2>
+                        <p>DataNER is my masters' thesis project. It is a framework for automated dataset building for NER using Wikipedia and WikiData.</p>
+                        <p>The code for the famework is available on <a href="https://github.com/LucasPages/dataner_creation">Github</a>.</p>
+                        <p>Built in Python and bash shell code.</p>
+                    </div>
+                    <div class="img-container">
+                        <img src="resources/media/dataner.png" alt="wikimedia logos">
+                    </div>
+                </article>
+                <article id="shifttracker">
+                    <div class="text-container">
+                        <h2>Shift Tracker</h2>
+                        <p>Shift Tracker is an ongoing web and mobile app project to keep track of worked shifts in any relevant work environments, such as restaurants, nursing or the service industry.</p>
+                        <p>The idea for this app came from my own experience working in restaurants and wanting to log my shifts.</p>
+                        <p>Built in JavaScript using React Native.</p>
+                    </div>
+                    <div class="img-container">
+                        <img src="resources/media/clock.jpg" alt="minimalist clock">
+                    </div>
+                </article>
+            </section>
+            <section id="skills">
+                <h2>Skills</h2>
+                <div class="skills-container">
+                    <i class="fa-brands fa-python"></i>
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <i class="fa-brands fa-js"></i>
+                    <i class="fa-brands fa-github"></i>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>March, 2023</p>
+        </footer>
     </body>
 </html>
