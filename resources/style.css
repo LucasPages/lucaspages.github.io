@@ -11,6 +11,20 @@ html {
     font-size: 16px;
 }
 
+main {
+    padding: 2rem;
+}
+
+main h2 {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+main p {
+    padding: 2rem 0;
+    display: inline-block;
+}
+
 section h2 {
     font-size: 2rem;
     font-weight: 500;
@@ -23,6 +37,10 @@ h3 {
 
 p {
     font-weight: 300;
+}
+
+a {
+    color: black;
 }
 
 /* Header */
@@ -64,6 +82,26 @@ header a:hover {
     transition: font-weigth .2s ease-in-out;
 }
 
+@media only screen and (max-width: 600px) {
+    h1#logo {
+        display: none;
+    }
+
+    header nav {
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 357px) {
+    header {
+        height: fit-content;
+    }
+    
+    header nav ul {
+        flex-direction: column;
+    }
+}
+
 /* About */
 
 
@@ -83,7 +121,7 @@ div.about-container div.text-container {
     padding-top: 2rem;
     padding-left: .5rem;
     max-width: 40%;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 div.about-container div.img-container{
@@ -94,6 +132,53 @@ div.about-container img {
     height: 100%;
     width: auto;
     border-radius: .25rem;
+}
+
+@media only screen and (max-width: 700px) {
+    div.text-container, div.about-container div.text-container {
+        font-size: .8rem;
+
+    }
+
+    section#about div.img-container {
+        height: 50%;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    main {
+        padding: .2rem;
+    }
+
+    section#about {
+        margin: 0;
+    }
+
+    div.about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.about-container div.text-container {
+        max-width: 100%;
+        overflow: scroll;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        margin-bottom: .2rem;
+    }
+
+    div.about-container div.text-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    div.about-container p {
+        padding: 0;
+        font-size: 1rem;
+    }
+
+    div.about-container br {
+        display: none;
+    }
 }
 
 
@@ -132,10 +217,44 @@ article.project-container div.img-container {
     max-width: 47%;
 }
 
+article.project-container div.img-container.media {
+    display: none;
+}
+
 article.project-container div.img-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: .25rem;
+}
+
+@media only screen and (max-width: 520px) {
+    article.project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    article.project-container div.text-container {
+        width: 100%;
+    }
+
+    article.project-container div.text-container p {
+        padding: .1rem 0;
+    }
+
+    article.project-container div.img-container {
+        aspect-ratio: 16 / 9;
+        max-width: 100%;
+        max-height: 50%;
+    }
+
+    article.project-container div.img-container.classic {
+        display: none;
+    }
+
+    article.project-container div.img-container.media {
+        display: block;
+    }
 }
 
 
@@ -181,18 +300,15 @@ div.skills-description {
     width: 20rem;
     height: 8rem;
     background-color: rgb(29, 13, 13);
+    box-shadow: -0.5rem 0.7rem rgba(29, 13, 13, .8);
 }
 
 div.skills-description p {
     display: block;
-    width: 90%;
-    max-height: 90%;
+    width: 100%;
+    max-height: 100%;
     text-align: left;
-    padding: 0;
-
-    position: relative;
-    left: .2rem;
-    top: .2rem;
+    padding: .2rem;
     overflow-y: scroll;
 }
 
@@ -204,6 +320,18 @@ div.skills-description p.desc {
     display: none;
 }
 
+
+@media only screen and (max-width: 700px) {
+    div.skills-flex {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 357px) {
+    div.skills-description {
+        width: 15rem;
+    }
+}
 
 /* Footer */
 
@@ -221,20 +349,6 @@ footer p {
 
 /* Contact page */
 
-main {
-    padding: 2rem;
-}
-
-main h2 {
-    font-weight: 700;
-    font-size: 2rem;
-}
-
-main p {
-    padding: 2rem 0;
-    display: inline-block;
-}
-
 div.contact-container {
     display: inline-block;
     position: relative;
@@ -244,4 +358,93 @@ div.contact-container {
 div.contact-container i {
     font-size: 2rem;
     padding: 1rem;
+}
+
+/* Dropdown menu */
+
+div.dropdown {
+    overflow: hidden;
+}
+
+div.dropdown-content {
+    display: none;
+    border: solid 1px black;
+    position: absolute;
+}
+
+div.dropdown-content ul {
+    display: block;
+}
+
+div.dropdown-content ul li {
+    background-color: white;
+    border: solid 1px black;
+    padding: .5rem;
+}
+
+div.dropdown-content ul li a {
+    color: black;
+    display: block;
+    text-align: left;
+}
+
+div.dropdown-content ul li:hover {
+    background-color: rgb(241, 236, 236)
+}
+
+/* Dark Mode */
+
+#dark-mode-button {
+    position: absolute;
+    top: 5.5rem;
+    right: .5rem;
+    padding: .2rem;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#dark-mode-button i {
+    font-size: 1.5rem;
+}
+
+.dark-mode {
+    background-color: rgb(29, 13, 13);
+    color: white;
+}
+
+body.dark-mode div.dropdown-content {
+    border: solid 1px white;
+}
+
+body.dark-mode div.dropdown-content ul li {
+    background-color: rgb(29, 13, 13);
+    border: solid 1px white;
+}
+
+body.dark-mode div.dropdown-content ul li:hover {
+    background-color: rgb(24, 24, 24);
+}
+
+body.dark-mode div.dropdown-content ul li a {
+    color: white;
+}
+
+body.dark-mode img {
+    opacity: .8;
+}
+
+body.dark-mode a {
+    color: white;
+}
+
+body.dark-mode div.skills-description {
+    background-color: rgb(235, 235, 235);
+    box-shadow: -0.5rem 0.7rem rgba(235, 235, 235, .9);
+}
+
+body.dark-mode div.skills-description p {
+    color: black;
+    font-weight: 400;
 }

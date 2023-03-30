@@ -19,13 +19,26 @@
             <nav>
                 <ul>
                     <li><a href="#about">About Me</a></li>
-                    <li><a href="#projects">Projects</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <a href="#" id="project-link">Projects <i class="fa fa-caret-down"></i></a>
+                            <div class="dropdown-content">
+                                <ul>
+                                    <li><a href="#dataner">DataNER</a></li>
+                                    <li><a href="#shifttracker">Shift Tracker</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </header>
         <main>
+            <button id="dark-mode-button">
+                <i class="fa-solid fa-moon"></i>
+            </button>
             <section id="about">
                 <h2>About Me</h2>
                 <div class="about-container">
@@ -41,6 +54,7 @@
                     </div>
                     </div>
             </section>
+            <hr>
             <section id="projects">
                 <h2>Projects</h2>
                 <article id="dataner" class="project-container">
@@ -55,7 +69,7 @@
                     </div>
                 </article>
                 <article id="shifttracker" class="project-container">
-                    <div class="img-container">
+                    <div class="img-container classic">
                         <img src="resources/media/clock.jpg" alt="minimalist clock">
                     </div>
                     <div class="text-container">
@@ -63,6 +77,9 @@
                         <p>Shift Tracker is an ongoing web and mobile app project to keep track of worked shifts in any relevant work environments, such as restaurants, nursing or the service industry.</p>
                         <p>The idea for this app came from my own experience working in restaurants and wanting to log my shifts.</p>
                         <p>Built in JavaScript using React Native.</p>
+                    </div>
+                    <div class="img-container media">
+                        <img src="resources/media/clock.jpg" alt="minimalist clock">
                     </div>
                 </article>
             </section>
@@ -77,7 +94,7 @@
                         <i class="fa-brands fa-github"></i>
                     </div>
                     <div class="skills-description">
-                        <p id="to-remove"> > </p>
+                        <p id="to-remove"> > Click one of my skills ! </p>
                         <p class="desc python"> > I've used Python for scientitic and data analysis purposes for more than three years now. I programmed my masters' thesis project in it.</p>
                         <p class="desc html5"> > I have a good foundation in HTML, I've used primarily for personal websites and projects.</p>
                         <p class="desc css3-alt"> > Good foundations in CSS, I've used it to style personal web projects.</p>
