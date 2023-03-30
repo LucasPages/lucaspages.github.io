@@ -151,12 +151,57 @@ section#skills div.skills-container {
     display: grid;
     grid-template: 6rem 6rem / 6rem 6rem 6rem;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     gap: 1rem;
 }
 
 section#skills i {
     font-size: 4rem;
+    border: solid 2px transparent;
+    border-radius: .25rem;
+}
+
+section#skils i:hover {
+    border: solid 2px rgb(29, 13, 13);
+}
+
+details summary {
+    list-style: none;
+}
+
+div.skills-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.skills-description {
+    color: rgb(235, 235, 235);
+    display: block;
+    width: 20rem;
+    height: 8rem;
+    background-color: rgb(29, 13, 13);
+}
+
+div.skills-description p {
+    display: block;
+    width: 90%;
+    max-height: 90%;
+    text-align: left;
+    padding: 0;
+
+    position: relative;
+    left: .2rem;
+    top: .2rem;
+    overflow-y: scroll;
+}
+
+div.skills-description p::-webkit-scrollbar {
+    display: none;
+}
+
+div.skills-description p.desc {
+    display: none;
 }
 
 

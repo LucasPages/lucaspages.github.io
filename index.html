@@ -9,7 +9,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-        <script src="script.js"></script>
+        <script src="script.js" defer></script>
         <script src="https://kit.fontawesome.com/2a117bd933.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -68,12 +68,22 @@
             </section>
             <section id="skills">
                 <h2>Skills</h2>
-                <div class="skills-container">
-                    <i class="fa-brands fa-python"></i>
-                    <i class="fa-brands fa-html5"></i>
-                    <i class="fa-brands fa-css3-alt"></i>
-                    <i class="fa-brands fa-js"></i>
-                    <i class="fa-brands fa-github"></i>
+                <div class="skills-flex">
+                    <div class="skills-container">
+                        <i class="fa-brands fa-python"></i>
+                        <i class="fa-brands fa-html5"></i>
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <i class="fa-brands fa-js"></i>
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                    <div class="skills-description">
+                        <p id="to-remove"> > </p>
+                        <p class="desc python"> > I've used Python for scientitic and data analysis purposes for more than three years now. I programmed my masters' thesis project in it.</p>
+                        <p class="desc html5"> > I have a good foundation in HTML, I've used primarily for personal websites and projects.</p>
+                        <p class="desc css3-alt"> > Good foundations in CSS, I've used it to style personal web projects.</p>
+                        <p class="desc js"> > Relatively new to JavaScript. I'm using this language for my web devs and mobile projects.</p>
+                        <p class="desc github"> > I've used Git and GitHub for years now, for academic purposes. I'm comfortable with its basic use.</p>
+                    </div>
                 </div>
             </section>
         </main>
